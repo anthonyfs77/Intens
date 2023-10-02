@@ -17,7 +17,7 @@ public class MainActivity3 extends AppCompatActivity {
         btnExplicit = findViewById(R.id.btnExplicit2);
 
         btnImplicit.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity3.this, MainActivity.class);
+            Intent intent = new Intent(MainActivity3.this, MainActivity4.class);
             startActivity(intent);
         });
 

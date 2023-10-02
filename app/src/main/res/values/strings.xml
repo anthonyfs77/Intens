@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Intens</string>
+    <string name="initial_time">10:00</string>
 </resources>

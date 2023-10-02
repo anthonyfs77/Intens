@@ -1,26 +1,41 @@
 package com.example.intens;
 
-
 import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.content.Intent;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private CountDownTimer countDownTimer;
+    TextView timerTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main4);
+        timerTextView = findViewById(R.id.timerTextView);
+        startCountDown();
 
-        findViewById(R.id.btnExplicit1).setOnClickListener(this);
-        findViewById(R.id.btnExplicit2).setOnClickListener(this);
-        findViewById(R.id.btnExplicit3).setOnClickListener(this);
-        findViewById(R.id.btnExplicit4).setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(this, MainActivity3.class);
-        startActivity(intent);
+    private void startCountDown() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        countDownTimer = new CountDownTimer(5000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText("" + millisUntilFinished / 1000);
+            }
+
+            @Override
+            public void onFinish() {
+                timerTextView.setText("Done!");
+                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                startActivity(intent);
+            }
+        }.start();
     }
 }
