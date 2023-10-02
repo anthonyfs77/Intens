@@ -9,7 +9,7 @@
         android:id="@+id/btnExplicit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Botones Implicitos"/>
+        android:text="Botones Explicitos"/>
 
     <Button
         android:id="@+id/btnExplicit2"
@@ -17,5 +17,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnExplicit1"
         android:layout_marginTop="50dp"
-        android:text="Botones Explicitos"/>
+        android:text="Botones Implicitos"/>
 </RelativeLayout>

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.net.Uri;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,15 +22,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         Intent intent;
-        switch (view.getId()) {
-            case R.id.btnExplicit1:
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
-                startActivity(intent);
-                break;
-            case R.id.btnExplicit2:
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"));
-                startActivity(intent);
-                break;
+        int id = view.getId();
+
+        if (id == R.id.btnExplicit1) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
+            startActivity(intent);
+        } else if (id == R.id.btnExplicit2) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"));
+            startActivity(intent);
+        } else if (id == R.id.btnExplicit3) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/"));
+            startActivity(intent);
+        } else if (id == R.id.btnExplicit4) {
+            intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/"));
+            startActivity(intent);
         }
     }
 }
