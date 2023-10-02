@@ -9,7 +9,7 @@
         android:id="@+id/btnExplicit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Implicito 1"/>
+        android:text="Botones Implicitos"/>
 
     <Button
         android:id="@+id/btnExplicit2"
@@ -17,22 +17,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnExplicit1"
         android:layout_marginTop="50dp"
-        android:text="Implicito 2"/>
-
-    <Button
-        android:id="@+id/btnExplicit3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnExplicit2"
-        android:layout_marginTop="50dp"
-        android:text="Implicito 3"/>
-
-    <Button
-        android:id="@+id/btnExplicit4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/btnExplicit3"
-        android:text="Implicito 4"/>
-
+        android:text="Botones Explicitos"/>
 </RelativeLayout>
